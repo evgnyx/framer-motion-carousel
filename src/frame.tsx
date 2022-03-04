@@ -1,5 +1,5 @@
 import { cloneElement, PropsWithChildren, ReactElement, useState } from 'react'
-import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence, motion, Transition, Variants } from 'framer-motion'
 import styles from './styles.module.scss'
 
 export interface FrameProps extends PropsWithChildren<unknown> {
@@ -24,10 +24,8 @@ export default function Frame({
       initial="start"
       animate="current"
       exit="end"
-      transition={{
-        duration: 1,
-        stiffness: 0,
-      }}
+      transition={ transition }
+      onAnimationStart={ () => setReady(false) }
       onAnimationComplete={ () => setReady(true) }
     >
       <AnimatePresence initial>
@@ -47,4 +45,9 @@ const variants = {
   end: (direction: number) => ({
     x: direction > 0 ? '-100%' : '100%'
   })
-}
+} as Variants
+
+const transition = {
+  duration: 1,
+  stiffness: 0,
+} as Transition
