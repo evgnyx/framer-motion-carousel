@@ -6,7 +6,7 @@ An example of React carousel built with TypeScript and Framer Motion animation l
 
 **./CarouselComponent.tsx**:
 ```jsx
-import { Carousel } from './src/'
+import { Carousel } from './'
 import Slide1 from './Slide1.tsx'
 // ...
 
@@ -27,8 +27,8 @@ export default function CarouselComponent() {
 **./Slide1.tsx**:
 ```jsx
 import { useState, useEffect } from 'react'
-import { CarouselChildProps } from './src/frame'
-import { useCarousel } from './src/context'
+import { CarouselChildProps } from './frame'
+import { useCarousel } from './context'
 
 /**
  * @param {boolean} ready Indicates if carousel transition animation is active
