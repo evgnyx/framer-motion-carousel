@@ -1,6 +1,6 @@
 # framer-motion-carousel
 
-An example of react carousel built with typescript and framer motion animation library.
+An example of React carousel built with TypeScript and Framer Motion animation library.
 
 ## Usage
 
